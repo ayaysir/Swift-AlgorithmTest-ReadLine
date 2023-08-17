@@ -27,7 +27,7 @@
 		44C0C33F2A8DF5880072A0B8 /* AlgorithmTest-ReadLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AlgorithmTest-ReadLine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C0C3422A8DF5880072A0B8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		44C0C34A2A8DF64B0072A0B8 /* 2798.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2798.swift; sourceTree = "<group>"; };
-		44C0C34C2A8DF6940072A0B8 /* Swift_ReadLine_인풋방법.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift_ReadLine_인풋방법.md"; sourceTree = "<group>"; };
+		44C0C34C2A8DF6940072A0B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		44C0C3362A8DF5880072A0B8 = {
 			isa = PBXGroup;
 			children = (
-				44C0C34C2A8DF6940072A0B8 /* Swift_ReadLine_인풋방법.md */,
+				44C0C34C2A8DF6940072A0B8 /* README.md */,
 				44C0C3492A8DF61F0072A0B8 /* Question */,
 				44C0C3412A8DF5880072A0B8 /* AlgorithmTest-ReadLine */,
 				44C0C3402A8DF5880072A0B8 /* Products */,

@@ -17,11 +17,15 @@ let inputs = readLine()!
 ## 문자열 여러 개 입력 (스페이스 구분자)
 ```swift
 let inputs = readLine()!.split(separator: " ")
+```
+```swift
 let inputs = readLine()!.split { $0 == " " }
 ```
 
 ## 값을 여러 개 받음 (구분자 없음, 예: 123456)
 ```swift
 let inputs = Array(readLine()!).map { Int(String($0))! }
+```
+```swift
 let inputs = Array(readLine()!).map { String($0)! }
 ```
