@@ -7,4 +7,17 @@
 
 import Foundation
 
-Q_2798()
+let questionDict: [Int: (() -> Void)] = [
+    2798: Q_2798,
+    18108: Q_18018,
+]
+
+func question(_ number: Int) {
+    print("======== Question \(number) ========")
+    questionDict[number]!()
+}
+
+let targetQuestion =
+2798
+
+question(targetQuestion)
