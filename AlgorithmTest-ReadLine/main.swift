@@ -10,6 +10,7 @@ import Foundation
 let questionDict: [Int: (() -> Void)] = [
     2798: Q_2798,
     18108: Q_18018,
+    1260: Q_1260,
 ]
 
 func question(_ number: Int) {
@@ -18,6 +19,7 @@ func question(_ number: Int) {
 }
 
 let targetQuestion =
-2798
+// 2798
+1260
 
 question(targetQuestion)
