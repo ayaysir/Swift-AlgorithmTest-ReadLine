@@ -102,9 +102,10 @@ func Q_1260() {
         
         graphs[node1].append(node2)
         graphs[node2].append(node1)
-        graphs[node1].sort()
-        graphs[node2].sort()
+        graphs[node1].sort() // DFS인 경우 내림차순
+        graphs[node2].sort() // DFS인 경우 내림차순
     }
+    // print(graphs)
     
     // DFS (Depth-First Search)
     print(dfs_recursive(V, graphs))
