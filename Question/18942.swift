@@ -84,17 +84,16 @@ import Foundation
  */
 
 func Q_18942() {
-    let input1: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
-    let N = input1[0]
-    let K = input1[1]
-    let P = input1[2]
-    
-    let A: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
-    let C: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
-    
-    // dp[i][j]는 i번째 노트까지 골라서 j번 콤보를 사용했을 때 얻을 수 있는 최대 점수
-    var dp = Array(repeating: Array(repeating: Int.min, count: K + 1), count: N + 1)
-
+    // let input1: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
+    // let N = input1[0]
+    // let K = input1[1]
+    // let P = input1[2]
+    //
+    // let A: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
+    // let C: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
+    //
+    // // dp[i][j]는 i번째 노트까지 골라서 j번 콤보를 사용했을 때 얻을 수 있는 최대 점수
+    // var dp = Array(repeating: Array(repeating: Int.min, count: K + 1), count: N + 1)
 }
 
                                                                         

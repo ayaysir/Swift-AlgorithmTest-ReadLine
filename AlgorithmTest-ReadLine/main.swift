@@ -15,6 +15,7 @@ let questionDict: [Int: (() -> Void)] = [
     1697: Q_1697,
     18942: Q_18942,
     2606: Q_2606,
+    17086: Q_17086,
 ]
 
 func question(_ number: Int) {
@@ -27,7 +28,8 @@ let targetQuestion =
 // 1260
 // 1012
 // 1697
-2606
+// 2606
+17086
 
 
 while true {
