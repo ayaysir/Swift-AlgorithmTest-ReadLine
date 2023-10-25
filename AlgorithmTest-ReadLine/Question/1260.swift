@@ -47,8 +47,8 @@ func Q_1260_old() {
         
         graphs[node1].append(node2)
         graphs[node2].append(node1)
-        graphs[node1].sort()
-        graphs[node2].sort()
+        graphs[node1].sort() // BFS-오름차순 / DFS-내림차순
+        graphs[node2].sort() // BFS-오름차순 / DFS-내림차순
     }
     
     // // show graph dictionary
