@@ -16,6 +16,7 @@ func Q_1697() {
         print(0)
         return
     } else if start > end {
+        // 뒤로 가는 경우도 있음: -1로만 이동
         print(start - end)
         return
     }
