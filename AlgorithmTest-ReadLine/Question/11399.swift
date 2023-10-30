@@ -13,7 +13,7 @@ import Foundation
  */
 
 func Q_11399() {
-    var n = Int(readLine()!)!
+    _ = Int(readLine()!)!
     let elapsedTimes: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }.sorted()
     
     var accTime = 0

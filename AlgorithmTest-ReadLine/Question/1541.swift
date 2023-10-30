@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+func Q_1541() {
+    let inputs = readLine()!
+    let splitted = inputs.split { ["+", "-",].contains(String($0)) }
+    
+    print(splitted)
+}
