@@ -8,7 +8,7 @@
 import Foundation
 
 func Q_1912실패() {
-    var array = [10, -4, 3, 1, 5, 6, -35, 12, 21, -1]
+    let array = [10, -4, 3, 1, 5, 6, -35, 12, 21, -1]
     var a2: [Int] = []
     var a3: [Int] = []
     var a4: [Int] = []
@@ -18,7 +18,6 @@ func Q_1912실패() {
     var a8: [Int] = []
     var a9: [Int] = []
     var a10: [Int] = []
-    
     
     for i in 0..<array.count - 1 {
         a2.append(array[i] + array[i + 1])
