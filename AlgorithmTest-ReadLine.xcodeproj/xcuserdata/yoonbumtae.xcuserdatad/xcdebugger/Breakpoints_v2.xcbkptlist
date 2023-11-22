@@ -3,4 +3,85 @@
    uuid = "B812739C-1949-44E8-B67C-AE076FAC01E3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlgorithmTest-ReadLine/Question/2512.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "Q_2512&#xc2e4;&#xd328;()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 529c3ee169b96678"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
+                  moduleName = "AlgorithmTest-ReadLine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2788">
+               </Location>
+               <Location
+                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 529c3ee169b96678"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
+                  moduleName = "AlgorithmTest-ReadLine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 28e08f1966eaf525"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Int, Swift.Int) -&gt; Swift.Int in AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
+                  moduleName = "AlgorithmTest-ReadLine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71A27BA7-DFFB-4635-8D26-379A0806F38E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlgorithmTest-ReadLine/Question/2512.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "Q_2512&#xc2e4;&#xd328;()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
