@@ -8,7 +8,7 @@
 import Foundation
 
 // 출처: https://beenii.tistory.com/143 [끄적이는 개발노트:티스토리]
-class PriorityQueue<T> {
+class PriorityQueue_<T> {
     private var heap: [T] = []
     private let comparing: (_ o1: T,_ o2: T) -> Bool
     
@@ -86,19 +86,19 @@ func Q_18352다익스트라시간초과() {
     }
     
     func dijkstra(_ start: Int) {
-        var prQ = PriorityQueue<(Int, Int)> { $0 > $1 }
+        let prQ = PriorityQueue_<(Int, Int)> { $0 > $1 }
         prQ.push((0, start))
         distance[start] = 0
         
         while !prQ.isEmpty() {
-            var (dist, now) = prQ.pop()!
+            let (dist, now) = prQ.pop()!
             
             if distance[now] < dist {
                 continue
             }
             
             for pair in graph[now] {
-                var cost = dist + pair.1
+                let cost = dist + pair.1
                 if cost < distance[pair.0] {
                     distance[pair.0] = cost
                     prQ.push((cost, pair.0))
@@ -146,7 +146,7 @@ func Q_18352_BFS시간초과() {
         distance[start] = 0
         
         while !q.isEmpty {
-            var now = q.removeFirst()
+            let now = q.removeFirst()
             for i in graph[now] {
                 if !visited.contains(i) {
                     visited.insert(i)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		440928172B2F4CCF002EAB0D /* 18352.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440928162B2F4CCF002EAB0D /* 18352.swift */; };
+		440928192B305988002EAB0D /* 1753.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440928182B305988002EAB0D /* 1753.swift */; };
+		4409281B2B305FF2002EAB0D /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409281A2B305FF2002EAB0D /* Heap.swift */; };
+		4409281D2B3061D6002EAB0D /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409281C2B3061D6002EAB0D /* PriorityQueue.swift */; };
 		443F2F322B0E47CE004294F5 /* 1789.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2F312B0E47CE004294F5 /* 1789.swift */; };
 		443F2F342B0E4E78004294F5 /* 2512.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2F332B0E4E78004294F5 /* 2512.swift */; };
 		443F2F362B0E5C65004294F5 /* 1654.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2F352B0E5C65004294F5 /* 1654.swift */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		440928162B2F4CCF002EAB0D /* 18352.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18352.swift; sourceTree = "<group>"; };
+		440928182B305988002EAB0D /* 1753.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1753.swift; sourceTree = "<group>"; };
+		4409281A2B305FF2002EAB0D /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		4409281C2B3061D6002EAB0D /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		443F2F312B0E47CE004294F5 /* 1789.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1789.swift; sourceTree = "<group>"; };
 		443F2F332B0E4E78004294F5 /* 2512.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2512.swift; sourceTree = "<group>"; };
 		443F2F352B0E5C65004294F5 /* 1654.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1654.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				443F2F332B0E4E78004294F5 /* 2512.swift */,
 				443F2F352B0E5C65004294F5 /* 1654.swift */,
 				440928162B2F4CCF002EAB0D /* 18352.swift */,
+				440928182B305988002EAB0D /* 1753.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -141,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				44E135912AB86A8700ACC79F /* DFS_BFS.swift */,
+				4409281A2B305FF2002EAB0D /* Heap.swift */,
+				4409281C2B3061D6002EAB0D /* PriorityQueue.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -205,7 +214,9 @@
 			files = (
 				44F30BF22AE979D100B67014 /* 1541.swift in Sources */,
 				444544AF2ABDFA7C0073F4F4 /* 17086.swift in Sources */,
+				4409281D2B3061D6002EAB0D /* PriorityQueue.swift in Sources */,
 				44E135922AB86A8700ACC79F /* DFS_BFS.swift in Sources */,
+				4409281B2B305FF2002EAB0D /* Heap.swift in Sources */,
 				440928172B2F4CCF002EAB0D /* 18352.swift in Sources */,
 				44E135F62ABA04A100ACC79F /* 1012.swift in Sources */,
 				44C0C3432A8DF5880072A0B8 /* main.swift in Sources */,
@@ -225,6 +236,7 @@
 				444544AB2ABB4D780073F4F4 /* 18942.swift in Sources */,
 				444E6A5C2AEFFDBD00AEC703 /* 2748.swift in Sources */,
 				444544A92ABB0DE20073F4F4 /* 1697.swift in Sources */,
+				440928192B305988002EAB0D /* 1753.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
