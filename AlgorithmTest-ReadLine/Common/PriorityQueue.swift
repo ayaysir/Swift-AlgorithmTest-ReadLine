@@ -37,6 +37,7 @@ struct PriorityQueue<T: Comparable> {
         var parentIndex = self.parentIndex(of: currentIndex)
 
         while currentIndex > 0 && elements[currentIndex] < elements[parentIndex] {
+            // 부모 인덱스의 값보다 자식 인덱스의 값이 작으면 스왑 (최소 힙을 유지하기 위해)
             elements.swapAt(currentIndex, parentIndex)
             currentIndex = parentIndex
             parentIndex = self.parentIndex(of: currentIndex)
@@ -52,6 +53,7 @@ struct PriorityQueue<T: Comparable> {
 
             var minIndex = currentIndex
 
+            // minIndex의 값보다 왼쪽 자식 인덱스의 값이 작다면 => minIndex를 갱신
             if leftChildIndex < count && elements[leftChildIndex] < elements[minIndex] {
                 minIndex = leftChildIndex
             }
@@ -60,12 +62,28 @@ struct PriorityQueue<T: Comparable> {
                 minIndex = rightChildIndex
             }
 
+            // 어떠한 조건도 만족하지 않는다면 (minIndex가 변경되지 않은 상태라면) 중지
             if minIndex == currentIndex {
                 break
             }
 
+            // 작은 값과 현재 값을 스왑
             elements.swapAt(currentIndex, minIndex)
             currentIndex = minIndex
+            
+            /*
+             예)
+                      10 (currentIndex)
+                     /  \
+                    15   7 (minIndex)
+             
+             인 경우 7(minIndex)과 10을 스왑하며 7이 새로운 currentIndex가 됩니다.
+             
+                     7 (currentIndex == minIndex)
+                    /  \
+                   15   10
+                      
+             */
         }
     }
 
@@ -73,6 +91,7 @@ struct PriorityQueue<T: Comparable> {
         guard index > 0 else {
             return 0
         }
+        
         return (index - 1) / 2
     }
 
