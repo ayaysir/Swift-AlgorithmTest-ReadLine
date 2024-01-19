@@ -8,6 +8,19 @@
 import Foundation
 
 func Q_17609() {
+    /// 회문 찾기 (recursive)
+    func isPalindrome(_ wordArr: [String], _ left: Int, _ right: Int) -> Bool {
+        if left >= right  {
+            return true
+        }
+        
+        if wordArr[left] == wordArr[right] {
+            return isPalindrome(wordArr, left + 1, right - 1)
+        } else {
+            return false
+        }
+    }
+    
     /// 유사회문 찾기: https://newdeal123.tistory.com/13
     func canPalindrome(_ wordArr: [String], _ left: Int, _ right: Int, _ canSkip: Bool) -> Bool {
         if left > right {
@@ -29,13 +42,19 @@ func Q_17609() {
     let wordArrs = (0..<T).map { _ in readLine()!.map(String.init) }
     
     for wordArr in wordArrs {
-        let mid = wordArr.count / 2
-        let left = wordArr[0..<mid].joined()
-        let isOdd = wordArr.count % 2 != 0
-        let rightReversed = wordArr[(isOdd ? mid + 1 : mid)...].reversed().joined() // reversed: O(1)
+        // let mid = wordArr.count / 2
+        // let left = wordArr[0..<mid].joined()
+        // let isOdd = wordArr.count % 2 != 0
+        // let rightReversed = wordArr[(isOdd ? mid + 1 : mid)...].reversed().joined() // reversed: O(1)
+        // 
+        // // 확실한 회문이면 넘어가기
+        // if left == rightReversed {
+        //     print(0)
+        //     continue
+        // }
         
-        // 확실한 회문이면 넘어가기
-        if left == rightReversed {
+        // 위 방법은 600ms인데, 아래 방법(포인터 + 재귀)은 170ms 나옴
+        if isPalindrome(wordArr, 0, wordArr.count - 1) {
             print(0)
             continue
         }
