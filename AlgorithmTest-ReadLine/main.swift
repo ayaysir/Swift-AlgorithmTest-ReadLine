@@ -39,6 +39,8 @@ let questionDict: [Int: (() -> Void)] = [
     14681: Q_14681,
     2884: Q_2884,
     2480: Q_2480,
+    15552: Q_15552,
+    11021: Q_11021,
 ]
 
 func question(_ number: Int) {
@@ -75,7 +77,9 @@ let targetQuestion =
 // 2753
 // 14681
 // 2884
-2480
+// 2480
+// 15552
+11021
 
 var once = false
 if once {
