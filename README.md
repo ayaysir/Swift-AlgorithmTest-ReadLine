@@ -76,7 +76,6 @@ final class FileIO {
         return sum * (isPositive ? 1:-1)
     }
 
-
     @inline(__always) func readString() -> String {
             var str = ""
             var now = read()
@@ -91,8 +90,8 @@ final class FileIO {
             }
 
             return str
-        }
-  }
+    }
+}
 ```
 </details>
 
