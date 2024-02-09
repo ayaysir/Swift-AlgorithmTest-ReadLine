@@ -19,7 +19,6 @@ func Q_10811() {
         basket[a...b].reversed().enumerated().forEach { (index, value) in
             basket[a + index] = value
         }
-        
     }
     
     print(basket[1...].map(String.init).joined(separator: " "))

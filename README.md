@@ -24,10 +24,10 @@ let inputs = readLine()!.split { $0 == " " }
 
 ## 값을 여러 개 받음 (구분자 없음, 예: 123456, ABCDEF)
 ```swift
-let inputs = Array(readLine()!).map { Int($0)! }
+let inputs = readLine()!.map { Int(String($0))! } // Int
 ```
 ```swift
-let inputs = Array(readLine()!).map { String($0)! }
+let inputs = readLine()!.map { String($0) } // String
 ```
 
 ## EOF(End of File) 처리

@@ -8,7 +8,7 @@
 import Foundation
 
 func Q_10807() {
-    let n = Int(readLine()!)!
+    let _ = Int(readLine()!)!
     let a = readLine()!.split(separator: " ").map { Int($0)! }
     let v = Int(readLine()!)!
     print(a.reduce(0) { $0 + ($1 == v ? 1 : 0)})
