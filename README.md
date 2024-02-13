@@ -27,7 +27,7 @@ let inputs = readLine()!.split { $0 == " " }
 let inputs = readLine()!.map { Int(String($0))! } // Int
 ```
 ```swift
-let inputs = readLine()!.map { String($0) } // String
+let inputs = readLine()!.map(String.init) // String
 ```
 
 ## EOF(End of File) 처리
