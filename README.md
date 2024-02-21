@@ -36,13 +36,12 @@ while let input = readLine() { ... }
 ```
 
 ## 빠른 입력 처리 1
+- 빠른 입력처리에서 결과를 보려면 control + D 키를 누름
 
 <details>
 <summary>접기/펼치기</summary>
 
 ```swift
-import Foundation
-
 final class FileIO {
     private let buffer: Data
     private var index: Int = 0
@@ -52,9 +51,7 @@ final class FileIO {
     }
     
     @inline(__always) private func read() -> UInt8 {
-        defer {
-            index += 1
-        }
+        defer { index += 1 }
         guard index < buffer.count else { return 0 }
         
         return buffer[index]
@@ -65,8 +62,7 @@ final class FileIO {
         var now = read()
         var isPositive = true
         
-        while now == 10
-                || now == 32 { now = read() } // 공백과 줄바꿈 무시
+        while now == 10 || now == 32 { now = read() } // 공백과 줄바꿈 무시
         if now == 45 { isPositive.toggle(); now = read() } // 음수 처리
         while now >= 48, now <= 57 {
             sum = sum * 10 + Int(now-48)
@@ -75,21 +71,19 @@ final class FileIO {
         
         return sum * (isPositive ? 1:-1)
     }
-
+    
     @inline(__always) func readString() -> String {
-            var str = ""
-            var now = read()
-
-            while now == 10
-                    || now == 32 { now = read() } // 공백과 줄바꿈 무시
-
-            while now != 10
-                    && now != 32 && now != 0 {
-                str += String(bytes: [now], encoding: .ascii)!
-                now = read()
-            }
-
-            return str
+        var str = ""
+        var now = read()
+        
+        while now == 10 || now == 32 { now = read() } // 공백과 줄바꿈 무시
+        
+        while now != 10 && now != 32 && now != 0 {
+            str += String(bytes: [now], encoding: .ascii)!
+            now = read()
+        }
+        
+        return str
     }
 }
 ```
