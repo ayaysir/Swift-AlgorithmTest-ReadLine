@@ -87,6 +87,15 @@ final class FileIO {
     }
 }
 ```
+### 숏코드
+```swift
+class IO{var b:Data,i=0;init(fh:FileHandle=FileHandle.standardInput){b=try!fh.readToEnd()!}
+@inline(__always)func read()->UInt8{defer{i+=1};guard i<b.count else{return 0};return b[i]}
+@inline(__always)func readInt()->Int{var s=0,n=read(),p=true;while n==10||n==32{n=read()}
+if n==45{p.toggle();n=read()};while n>=48,n<=57{s=s*10+Int(n-48);n=read()};return s*(p ?1:-1)}
+@inline(__always)func readString()->String{var t="",n=read();while n==10||n==32 {n=read()}
+while n != 10,n != 32,n != 0{t+=String(bytes:[n],encoding:.ascii)!;n=read()};return t}}
+```
 </details>
 
 ## 빠른 입력 처리 2
