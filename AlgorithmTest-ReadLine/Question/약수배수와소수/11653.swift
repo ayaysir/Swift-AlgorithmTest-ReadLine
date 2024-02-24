@@ -34,10 +34,6 @@ func Q_11653() {
         var isPrime = [Bool](repeating: true, count: limit + 1)
         var primes = [Int]()
 
-        for i in 2...limit {
-            isPrime[i] = true
-        }
-
         var i = 2
         while i * i <= limit {
             if isPrime[i] {
