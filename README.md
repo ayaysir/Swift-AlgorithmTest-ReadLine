@@ -36,7 +36,7 @@ while let input = readLine() { ... }
 ```
 
 ## 빠른 입력 처리 1
-- 빠른 입력처리에서 결과를 보려면 control + D 키를 누름
+- 빠른 입력처리에서 결과를 보려면 `control + D` 키를 누름
 
 <details>
 <summary>접기/펼치기</summary>
