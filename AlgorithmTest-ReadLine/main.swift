@@ -147,10 +147,15 @@ let questionDict: [Int: (() -> Void)] = [
      10872: Q_10872,
      11050: Q_11050,
      1010: Q_1010,
+     1037: Q_1037,
+     25192: Q_25192,
+     26069: Q_26069,
+     2108: Q_2108,
+     20920: Q_20920,
 ]
 
 let targetQuestion =
-1010
+20920
 
 func question(_ number: Int) {
     print("======== Question \(number) ========")
