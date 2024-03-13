@@ -5,7 +5,7 @@
 //  Created by 윤범태 on 3/12/24.
 //
 
-func Q_10872() {
+func Q_10872_recursive() {
     func factorial(_ n: Int) -> Int {
         // 종료 조건을 n == 1이 아니고 0인 경우도 포함해야 하므로 n <= 1로 해야함
         // 종료 조건이 n == 1인데 n = 0인 경우 스택 오버플로 발생
@@ -21,6 +21,20 @@ func Q_10872_OLD() {
     print(list[Int(readLine()!)!])
 }
 
+func Q_10872() {
+    let n = Int(readLine()!)!
+    
+    if 0...1 ~= n {
+        print(1)
+    } else {
+        var result = n
+        for i in (1..<n).reversed() {
+            result *= i
+        }
+        
+        print(result)
+    }
+}
 
 /*
 팩토리얼 https://www.acmicpc.net/problem/10872
