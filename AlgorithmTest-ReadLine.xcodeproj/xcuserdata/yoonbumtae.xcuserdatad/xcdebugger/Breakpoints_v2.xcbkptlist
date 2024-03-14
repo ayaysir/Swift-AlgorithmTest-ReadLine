@@ -18,53 +18,6 @@
             endingLineNumber = "72"
             landmarkName = "Q_2512&#xc2e4;&#xd328;()"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 529c3ee169b96678"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
-                  moduleName = "AlgorithmTest-ReadLine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "2788">
-               </Location>
-               <Location
-                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 529c3ee169b96678"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
-                  moduleName = "AlgorithmTest-ReadLine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "1292">
-               </Location>
-               <Location
-                  uuid = "089A4852-2228-4BB1-B6D1-24A7C33D563B - 28e08f1966eaf525"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Int, Swift.Int) -&gt; Swift.Int in AlgorithmTest_ReadLine.Q_2512() -&gt; ()"
-                  moduleName = "AlgorithmTest-ReadLine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoonbumtae/Desktop/Xcode%20Project/AlgorithmTest-ReadLine/AlgorithmTest-ReadLine/Question/2512.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

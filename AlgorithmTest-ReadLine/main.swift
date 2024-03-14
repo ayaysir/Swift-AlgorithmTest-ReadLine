@@ -159,10 +159,29 @@ let questionDict: [Int: (() -> Void)] = [
      4779: Q_4779,
      2447: Q_2447,
      11729: Q_11729,
+     15649: Q_15649,
+     15650: Q_15650,
+     15651: Q_15651,
+     15652: Q_15652,
+     15654: Q_15654,
+     15655: Q_15655,
+     15656: Q_15656,
+     15657: Q_15657,
+     15663: Q_15663,
+     15664: Q_15664,
+     15665: Q_15665,
+     15666: Q_15666,
 ]
 
+// while true {
+//     print("Input Question Number:", terminator: " ")
+//     let targetQuestion = Int(readLine()!)!
+//     print("======== Question \(targetQuestion) ========")
+//     questionDict[targetQuestion]!()
+// }
+
 let targetQuestion =
-11729
+15666
 
 func question(_ number: Int) {
     print("======== Question \(number) ========")

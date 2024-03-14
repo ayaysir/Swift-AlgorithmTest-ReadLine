@@ -8,7 +8,7 @@
 import Foundation
 
 func Q_24511() {
-    let n = Int(readLine()!)!
+    _ = Int(readLine()!)!
     let refs = readLine()!.split{ $0 == " " }.map { $0 == "0" ? true : false}
     var deq = CompactDeque<Int>()
     readLine()!.split{ $0 == " " }.enumerated().forEach { if refs[$0.offset] {deq.enqueueRear(Int($0.element)!)} }
