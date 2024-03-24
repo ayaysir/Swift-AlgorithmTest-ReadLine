@@ -69,10 +69,16 @@ func VoidFilesGeneratorByACMICPCStep() {
         }
         
         readLines.append(r)
+        // print("r:", r, r.isEmpty, r.count)
     }
+    // print(readLines)
+    
+    let dir = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
+    let acmicpcDir = dir.appendingPathComponent("ACMICPC", isDirectory: true)
     
     let questions: [ACMICPCStepInfo] = readLines.compactMap {
         let words = $0.split(separator: "\t")
+        // print(words)
         if !words.isEmpty, let questionIndex = Int(words[0]) {
             let questionNumber = String(words[1])
             let questionTitle = String(words[2])
@@ -113,9 +119,6 @@ func VoidFilesGeneratorByACMICPCStep() {
     formatter.timeZone = .current
     formatter.dateFormat = "M/d/y"
     
-    let dir = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
-    let acmicpcDir = dir.appendingPathComponent("ACMICPC", isDirectory: true)
-    
     if !FileManager.default.fileExists(atPath: acmicpcDir.path) {
         do {
             try FileManager.default.createDirectory(atPath: acmicpcDir.path, withIntermediateDirectories: true, attributes: nil)
@@ -127,6 +130,10 @@ func VoidFilesGeneratorByACMICPCStep() {
         // 먼저 디렉토리 비우기
         do {
             try FileManager.default.contentsOfDirectory(atPath: acmicpcDir.path).forEach { file in
+                guard file != "복붙.txt" else {
+                    return
+                }
+                
                 try FileManager.default.removeItem(atPath: acmicpcDir.path + "/" + file)
             }
         } catch {
