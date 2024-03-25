@@ -22,7 +22,7 @@ func Q_6549() {
             }
         }
         
-        var mid = (start + end) / 2
+        let mid = (start + end) / 2
         let leftArea = recursive(start, mid, histogram)
         let rightArea = recursive(mid, end, histogram)
         var (left, right) = (mid - 1, mid + 1)

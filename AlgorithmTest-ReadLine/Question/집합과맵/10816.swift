@@ -7,7 +7,7 @@
 
 import Foundation
 
-func Q_10816() {
+func Q_10816_() {
     let _ = readLine()
     let cards = readLine()!.split(separator: " ").map { Int($0)! }
     var dict: [Int: Int] = [:]
