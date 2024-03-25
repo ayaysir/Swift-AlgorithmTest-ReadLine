@@ -90,7 +90,7 @@ func Q_12015() {
  end = array.count와 array.count - 1중 둘 중 뭐가 맞냐?
  - end를 갱신할 때 end = mid - 1로 하면 array.count - 1을 선택 후 while문의 조건을 start <= end로 (1920번 문제)
  - end를 갱신할 때 end = mid로 하면 array.count를 선택 후 while문의 조건을 start < end로 (10816번 문제)
-
+ (직접 그려가면서 확인)
  -------------
  
  문제

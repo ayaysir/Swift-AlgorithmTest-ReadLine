@@ -47,6 +47,16 @@ func Q_1992() {
     
     recursive()
     print(result)
+    print(result
+        .replacingOccurrences(of: "(", with: "x")
+        .replacingOccurrences(of: ")", with: "")
+        .replacingOccurrences(of: "0", with: "b")
+        .replacingOccurrences(of: "1", with: "w"))
+    
+    let decompressedString = decompressQuadtree(compressed: result)
+        .map { $0.joined(separator: " ") }
+        .joined(separator: "\n")
+    print("decompressed:", decompressedString, separator: "\n")
 }
 
 /*
@@ -88,16 +98,82 @@ func Q_1992() {
  영상을 압축한 결과를 출력한다.
 
  예제 입력 1
- 8
- 11110000
- 11110000
- 00011100
- 00011100
- 11110000
- 11110000
- 11110011
- 11110011
+8
+11110000
+11110000
+00011100
+00011100
+11110000
+11110000
+11110011
+11110011
  
  예제 출력 1
  ((110(0101))(0010)1(0001))
+ 
+ 예제 2
+4
+0011
+0011
+1000
+0100
+ (01(1001)0)
+ 참고: xbwxwbbwb
+ - "("만 있어도 압축 해제할 수 있음
+ - https://velog.io/@qwe910205/문제-풀이-쿼드-트리-뒤집기JAVA
+ - https://www.algospot.com/judge/problem/read/QUADTREE
  */
+
+func decompressQuadtree(compressed: String, size: Int? = nil) -> [[String]] {
+    let compressed = compressed.replacingOccurrences(of: ")", with: "")
+    let compressedArray = compressed.map(String.init)
+    
+    let size = size ?? getSize()
+    var matrix = Array(repeating: Array(repeating: "0", count: size), count: size)
+    
+    var stringIndex = 0
+    decompress(stringIndex: &stringIndex, size: size)
+    
+    func decompress(stringIndex: inout Int, row: Int = 0, col: Int = 0, size: Int) {
+        let head = compressedArray[stringIndex]
+        stringIndex += 1
+        
+        if head == "0" || head == "1" {
+            for i in 0..<size {
+                for j in 0..<size {
+                    matrix[row + i][col + j] = (head == "1" ? "1" : "0")
+                }
+            }
+        } else {
+            let half = size / 2
+            decompress(stringIndex: &stringIndex, row: row, col: col, size: half)
+            decompress(stringIndex: &stringIndex, row: row, col: col + half, size: half)
+            decompress(stringIndex: &stringIndex, row: row + half, col: col, size: half)
+            decompress(stringIndex: &stringIndex, row: row + half, col: col + half, size: half)
+        }
+    }
+    
+    func getSize() -> Int {
+        var stringIndex = 0
+        let depth = Double(getDepth(stringIndex: &stringIndex, depth: 0))
+        return Int(pow(Double(2), depth))
+    }
+    
+    func getDepth(stringIndex: inout Int, depth: Int) -> Int {
+        let head = compressedArray[stringIndex]
+        stringIndex += 1
+        
+        var maxDepth = depth
+        if head == "0" || head == "1" {
+            return depth
+        } else {
+            for _ in 0..<4 {
+                maxDepth = max(getDepth(stringIndex: &stringIndex, depth: depth + 1), maxDepth)
+            }
+        }
+        
+        return maxDepth
+    }
+    
+    return matrix
+}
