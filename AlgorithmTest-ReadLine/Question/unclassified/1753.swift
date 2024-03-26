@@ -12,15 +12,6 @@ import Foundation
  문제풀이: https://dy-coding.tistory.com/entry/%EB%B0%B1%EC%A4%80-1753%EB%B2%88-%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C-java
  */
 
-struct HeapNode: Comparable {
-    static func < (lhs: HeapNode, rhs: HeapNode) -> Bool {
-        lhs.weight < rhs.weight
-    }
-    
-    var weight: Int
-    var number: Int
-}
-
 func Q_1753() {
     let VE: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
     let (V, E) = (VE[0], VE[1])
@@ -61,6 +52,15 @@ func Q_1753() {
                 }
             }
         }
+    }
+    
+    struct HeapNode: Comparable {
+        static func < (lhs: HeapNode, rhs: HeapNode) -> Bool {
+            lhs.weight < rhs.weight
+        }
+        
+        var weight: Int
+        var number: Int
     }
 }
 

@@ -1,15 +1,15 @@
 //
-//  PriorityQueue.swift
+//  PriorityQueueUseAbsValue.swift
 //  AlgorithmTest-ReadLine
 //
-//  Created by 윤범태 on 2023/12/18.
+//  Created by 윤범태 on 3/26/24.
 //
 
 import Foundation
 
 /// 최소 힙을 이용한 우선순위 큐 구조체
-struct PriorityQueue<T: Comparable> {
-    private var elements: [T] = []
+struct PriorityQueueUseAbsValue {
+    private var elements: [Int] = []
 
     var isEmpty: Bool {
         return elements.isEmpty
@@ -19,12 +19,12 @@ struct PriorityQueue<T: Comparable> {
         return elements.count
     }
 
-    mutating func enqueue(_ element: T) {
+    mutating func enqueue(_ element: Int) {
         elements.append(element)
         heapifyUp()
     }
 
-    mutating func dequeue() -> T? {
+    mutating func dequeue() -> Int? {
         guard !isEmpty else { return nil }
 
         elements.swapAt(0, count - 1)
@@ -37,8 +37,8 @@ struct PriorityQueue<T: Comparable> {
         var currentIndex = count - 1
         var parentIndex = self.parentIndex(of: currentIndex)
 
-        while currentIndex > 0 && elements[currentIndex] < elements[parentIndex] {
-            // 부모 인덱스의 값보다 자식 인덱스의 값이 작으면 스왑 (최소 힙을 유지하기 위해)
+        while currentIndex > 0 && isNeedSwap(base: elements[currentIndex], compare: elements[parentIndex]) {
+            // 조건 1: 부모 인덱스의 값보다 자식 인덱스의 값이 작으면 스왑 (최소 힙을 유지하기 위해)
             elements.swapAt(currentIndex, parentIndex)
             currentIndex = parentIndex
             parentIndex = self.parentIndex(of: currentIndex)
@@ -53,13 +53,14 @@ struct PriorityQueue<T: Comparable> {
             let rightChildIndex = rightChildIndex(of: currentIndex)
 
             var minIndex = currentIndex
-
-            // minIndex의 값보다 왼쪽 자식 인덱스의 값이 작다면 => minIndex를 갱신
-            if leftChildIndex < count && elements[leftChildIndex] < elements[minIndex] {
+            
+            // 조건 2: minIndex의 값보다 왼쪽 자식 인덱스의 값이 작다면 => minIndex를 갱신
+            if leftChildIndex < count && isNeedSwap(base: elements[leftChildIndex], compare: elements[minIndex]) {
                 minIndex = leftChildIndex
             }
-
-            if rightChildIndex < count && elements[rightChildIndex] < elements[minIndex] {
+            
+            // 조건 3: minIndex의 값보다 오른쪽 자식 인덱스의 값이 작다면 => minIndex를 갱신
+            if rightChildIndex < count && isNeedSwap(base: elements[rightChildIndex], compare: elements[minIndex]) {
                 minIndex = rightChildIndex
             }
 
@@ -71,21 +72,11 @@ struct PriorityQueue<T: Comparable> {
             // 작은 값과 현재 값을 스왑
             elements.swapAt(currentIndex, minIndex)
             currentIndex = minIndex
-            
-            /*
-             예)
-                      10 (currentIndex)
-                     /  \
-                    15   7 (minIndex)
-             
-             인 경우 7(minIndex)과 10을 스왑하며 7이 새로운 currentIndex가 됩니다.
-             
-                     7 (currentIndex == minIndex)
-                    /  \
-                   15   10
-                      
-             */
         }
+    }
+    
+    private func isNeedSwap(base: Int, compare: Int) -> Bool {
+        abs(base) < abs(compare) || (abs(base) == abs(compare) && (base < compare))
     }
 
     private func parentIndex(of index: Int) -> Int {
