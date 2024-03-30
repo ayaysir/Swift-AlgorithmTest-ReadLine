@@ -111,7 +111,7 @@ func Q_6549_스택2() {
 
         var stack: [Int] = [-1], maxArea: Int = .min
         for i in 0...n {
-            while stack.count > 1, histogram[stack.last!] > histogram[i] {
+            while stack.count > 1, histogram[stack.last!] >= histogram[i] {
                 // 최대 넓이 계산
                 let height = histogram[stack.popLast()!]
                 let width = i - 1 - stack.last!
