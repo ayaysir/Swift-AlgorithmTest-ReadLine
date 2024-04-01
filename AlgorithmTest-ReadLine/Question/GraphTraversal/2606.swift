@@ -7,7 +7,37 @@
 
 import Foundation
 
+/// 바이러스 https://www.acmicpc.net/problem/2606
 func Q_2606() {
+    _ = Int(readLine()!)!
+    let m = Int(readLine()!)!
+    var graphs = [Int : [Int]]()
+    
+    for _ in 0..<m {
+        let r = readLine()!.split(separator: " ").map { Int($0)! }
+        graphs[r[0], default: []].append(r[1])
+        graphs[r[1], default: []].append(r[0])
+    }
+    
+    var count = 0
+    var visited: Set<Int> = []
+    
+    func dfs(_ node: Int) {
+        if !visited.contains(node) {
+            count += 1
+            visited.insert(node)
+            
+            for neighbor in graphs[node, default: []] {
+                dfs(neighbor)
+            }
+        }
+    }
+    
+    dfs(1)
+    print(visited.count - 1)
+}
+
+func Q_2606_OLD() {
     let nodeCount = Int(readLine()!)!
     let caseCount = Int(readLine()!)!
     
@@ -74,6 +104,7 @@ func Q_2606() {
  5 2
  5 6
  4 7
+ 
  예제 출력 1
  4
  */

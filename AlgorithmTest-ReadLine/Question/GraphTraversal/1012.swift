@@ -7,7 +7,54 @@
 
 import Foundation
 
+/// https://www.acmicpc.net/problem/1012
 func Q_1012() {
+    var result = ""
+    for _ in (0..<Int(readLine()!)!) {
+        let mnc = readLine()!.split(separator: " ").map { Int($0)! }
+        let (n, m, c) = (mnc[1], mnc[0], mnc[2])
+        var farm = Array(repeating: Array(repeating: 0, count: m), count: n)
+        
+        for _ in 0..<c {
+            let coord = readLine()!.split(separator: " ").map { Int($0)! }
+            let (y, x) = (coord[1], coord[0])
+            farm[y][x] = 1
+        }
+        
+        func dfs(_ y: Int, _ x: Int) {
+            let dir4: [(y: Int, x: Int)] = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+            farm[y][x] = -1
+            
+            for dir in dir4 {
+                let (ny, nx) = (y + dir.y, x + dir.x)
+                
+                if ny < 0 || ny >= n || nx < 0 || nx >= m {
+                    continue
+                }
+                
+                if farm[ny][nx] == 1 {
+                    dfs(ny, nx)
+                }
+            }
+        }
+        
+        var count = 0
+        for i in 0..<n {
+            for j in 0..<m {
+                if farm[i][j] == 1 {
+                    count += 1
+                    dfs(i, j)
+                }
+            }
+        }
+        
+        result.write("\(count)\n")
+    }
+    
+    print(result)
+}
+
+func Q_1012_OLD() {
     // 농장 배열 만들기
     var farm: [[Int]]!
     
@@ -77,6 +124,7 @@ func Q_1012() {
  0    0    0    0    1    0    0    0    0    0
  0    0    1    1    0    0    0    1    1    1
  0    0    0    0    1    0    0    1    1    1
+ 
  입력
  입력의 첫 줄에는 테스트 케이스의 개수 T가 주어진다. 그 다음 줄부터 각각의 테스트 케이스에 대해 첫째 줄에는 배추를 심은 배추밭의 가로길이 M(1 ≤ M ≤ 50)과 세로길이 N(1 ≤ N ≤ 50), 그리고 배추가 심어져 있는 위치의 개수 K(1 ≤ K ≤ 2500)이 주어진다. 그 다음 K줄에는 배추의 위치 X(0 ≤ X ≤ M-1), Y(0 ≤ Y ≤ N-1)가 주어진다. 두 배추의 위치가 같은 경우는 없다.
 
@@ -84,41 +132,41 @@ func Q_1012() {
  각 테스트 케이스에 대해 필요한 최소의 배추흰지렁이 마리 수를 출력한다.
 
  예제 입력 1
- 2
- 10 8 17
- 0 0
- 1 0
- 1 1
- 4 2
- 4 3
- 4 5
- 2 4
- 3 4
- 7 4
- 8 4
- 9 4
- 7 5
- 8 5
- 9 5
- 7 6
- 8 6
- 9 6
- 10 10 1
- 5 5
+2
+10 8 17
+0 0
+1 0
+1 1
+4 2
+4 3
+4 5
+2 4
+3 4
+7 4
+8 4
+9 4
+7 5
+8 5
+9 5
+7 6
+8 6
+9 6
+10 10 1
+5 5
  
  예제 출력 1
  5
  1
  
  예제 입력 2
- 1
- 5 3 6
- 0 2
- 1 2
- 2 2
- 3 2
- 4 2
- 4 0
+1
+5 3 6
+0 2
+1 2
+2 2
+3 2
+4 2
+4 0
  
  예제 출력 2
  2

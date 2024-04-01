@@ -7,31 +7,6 @@
 
 import Foundation
 
-// class Node<T>: CustomStringConvertible {
-//     var value: T
-//     var prev, next: Node<T>?
-//
-//     init(value: T) {
-//         self.value = value
-//     }
-//
-//     init(value: T, prev: Node<T>) {
-//         self.value = value
-//         self.prev = prev
-//     }
-//
-//     init(value: T, prev: Node<T>, next: Node<T>) {
-//         self.value = value
-//         self.prev = prev
-//         self.next = next
-//     }
-//
-//     var description: String {
-//         "(value: \(value), prevValue: \(prev?.value as Any), nextValue: \(next?.value as Any))"
-//     }
-// }
-
-
 func Q_1260_old() {
     let input1: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
     

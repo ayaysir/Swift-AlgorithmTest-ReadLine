@@ -7,7 +7,44 @@
 
 import Foundation
 
+/// 숨바꼭질 https://www.acmicpc.net/problem/1697
 func Q_1697() {
+    let r = readLine()!.split(separator: " ").map { Int($0)! }
+    let (n, k) = (r[0], r[1])
+    var visited = Array(repeating: false, count: 100001)
+    
+    var result = 0
+    func bfs() {
+        let dirs = [{ $0 + 1 }, { $0 - 1 }, { $0 * 2 }]
+        var q = [(p: n, d: 0)]
+        var sIdx = 0
+        
+        while sIdx < q.count {
+            let pop = q[sIdx]
+            sIdx += 1
+            
+            if pop.p == k {
+                result = pop.d
+                break
+            }
+            
+            for dir in dirs {
+                let nx = dir(pop.p)
+                
+                // 10만까지 맵이 있으므로 10만1부터 불가처리해야됨
+                if !(nx < 0 || nx > 100000 || visited[nx])  {
+                    visited[nx] = true
+                    q.append((nx, pop.d + 1))
+                }
+            }
+        }
+    }
+    
+    bfs()
+    print(result)
+}
+
+func Q_1697_OLD() {
     let input: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
     let start = input[0]
     let end = input[1]
@@ -62,6 +99,11 @@ func Q_1697() {
 }
 
 /*
+ [풀이]
+ BFS를 사용하는 이유 https://www.acmicpc.net/board/view/115948
+ - dfs는 조건에 해당하는 값을 찾았을 때 그게 최단 루트일수도 아닐수도 있습니다. 그래서 다른 가능한 모든 값과 비교하여 최소값을 선정해야 합니다.
+ - bfs는 가장 먼저 찾는 값이 최단 루트이므로 가장 처음 목표에 도달하면 리턴하는 식으로 불필요한 탐색을 줄일 수 있습니다.
+ 
  숨바꼭질
  https://www.acmicpc.net/problem/1697
  
@@ -84,36 +126,36 @@ func Q_1697() {
  4
  
  반례모음
- 6 11
+6 11
  2
 
- 0 1
+0 1
  1
  
- 1 15
+1 15
  5
  
- 1 100000
+1 100000
  21
  
- 10 40
+10 40
  2
  
- 0 0
+0 0
  0
  
- 5 0
+5 0
  5
  
- 10007 98767
+10007 98767
  2343
  
- 15964 89498
+15964 89498
  4781
  
- 5 35
+5 35
  5
  
- 3482 45592
+3482 45592
  637
  */

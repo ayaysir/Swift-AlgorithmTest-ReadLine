@@ -87,3 +87,36 @@ func dfs_recursive(_ start: Int, _ graphs: [[Int]]) -> String {
     dfs(start)
     return result
 }
+
+/// 최소 경로의 미로 찾기 BFS:
+///  - '최소'가 나오면 BFS로 풀어야 한다.
+func bfsFindMaze(maze: [[String]], visited: inout [[Int]]) {
+    let (n, m) = (10, 10)
+    visited[0][0] = 1
+    var q = [(y: Int, x: Int)]()
+    var qStartIndex = 0
+    q.append((0, 0))
+    
+    let dir4: [(y: Int, x: Int)] = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    
+    while qStartIndex < q.count {
+        let pop = q[qStartIndex]
+        qStartIndex += 1
+        
+        for dir in dir4 {
+            let ny = pop.y + dir.y
+            let nx = pop.x + dir.x
+            
+            if ny < 0 || ny >= n || nx < 0 || nx >= m {
+                continue
+            }
+            
+            if maze[ny][nx] == "1", visited[ny][nx] == -1 {
+                visited[ny][nx] = visited[pop.y][pop.x] + 1
+                q.append((ny, nx))
+            }
+        }
+    }
+    
+    // 결과: visited[n - 1][m - 1]
+}

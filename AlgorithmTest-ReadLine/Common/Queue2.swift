@@ -5,7 +5,7 @@
 //  Created by 윤범태 on 2/27/24.
 //
 
-import Foundation
+// import Foundation
 
 struct Queue2<T> {
     private var array: [T] = []
