@@ -8,7 +8,7 @@
 // import Foundation
 
 /// 16진수 https://www.acmicpc.net/problem/1550
-func Q_1550_() {
+func Q_1550() {
     func hex6ToDec(_ numArr: [String]) -> Int {
         let exps = [1_048_576, 65_536, 4_096, 256, 16, 1]
         let startExp = 6 - numArr.count
