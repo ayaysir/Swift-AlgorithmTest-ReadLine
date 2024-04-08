@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 가장 긴 증가하는 부분 수열 https://www.acmicpc.net/problem/11053
 func Q_11053() {
     _ = readLine()
     let numbers = readLine()!.split(separator: " ").map { Int($0)! }
@@ -22,7 +23,14 @@ func Q_11053() {
 }
 
 /*
- 가장 긴 증가하는 부분 수열 https://www.acmicpc.net/problem/11053
+ [풀이]
+ - numbers[j] (뒤에 위치)가 numbers[i] (앞에 위치)보다 작을 때만 for문이 동작
+ - dp[i]: 앞에 위치한 숫자에서의 LIS 길이
+ - dp[j]: 뒤에 위치한 숫자에서의 LIS 길이
+   - dp[j]는 현재 숫자를 포함하지 않는 부분 수열의 최대 길이이고, 여기에 현재 숫자를 추가하면 길이가 1 증가
+   - dp[j] + 1은 현재 숫자를 포함한 부분 수열의 길이를 나타냅니다.
+ 
+ ---------
  
  문제
  수열 A가 주어졌을 때, 가장 긴 증가하는 부분 수열을 구하는 프로그램을 작성하시오.
