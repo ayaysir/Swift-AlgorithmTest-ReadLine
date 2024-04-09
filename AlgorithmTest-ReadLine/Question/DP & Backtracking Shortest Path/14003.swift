@@ -42,7 +42,7 @@ func Q_14003() {
         paths.append(numbers[i])
     }
     
-    print(numbers, lis, paths.reversed(), indices)
+    // print(numbers, lis, paths.reversed(), indices)
     
     print(lis.count)
     print(paths.reversed().map(String.init).joined(separator: " "))
