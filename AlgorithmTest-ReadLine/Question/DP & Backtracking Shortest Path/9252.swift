@@ -92,16 +92,16 @@ func Q_9252() {
  LCS가 여러 가지인 경우에는 아무거나 출력하고, LCS의 길이가 0인 경우에는 둘째 줄을 출력하지 않는다.
 
  예제 입력 1
- ACAYKP
- CAPCAK
+ACAYKP
+CAPCAK
  
  예제 출력 1
  4
  ACAK
  
  예제 입력 2
- GBCDFE
- ABCDEF
+GBCDFE
+ABCDEF
  
  예제 출력 2
  4

@@ -280,7 +280,7 @@ let questionDict: [Int: (() -> Void)] = [
 // }
 
 let targetQuestion =
-9252
+2618
 
 func question(_ number: Int) {
     print("======== Question \(number) ========")
@@ -288,10 +288,6 @@ func question(_ number: Int) {
 }
 
 var once = false
-if once {
+repeat {
     question(targetQuestion)
-} else {
-    while true {
-        question(targetQuestion)
-    }
-}
+} while !once
