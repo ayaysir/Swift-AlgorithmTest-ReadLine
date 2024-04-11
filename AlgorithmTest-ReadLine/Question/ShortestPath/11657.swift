@@ -16,7 +16,7 @@ func Q_11657() {
     let r = readLine()!.split(separator: " ").map { Int($0)! }
     let (n, m) = (r[0], r[1])
     /// 모든 간선(Edge)에 대한 정보를 담는 리스트
-    var edges: [Edge] = (0..<m).map { _ in makeEdge(from: readLine()!.split(separator: " ").map { Int($0)! }) }
+    let edges: [Edge] = (0..<m).map { _ in makeEdge(from: readLine()!.split(separator: " ").map { Int($0)! }) }
     var dists = Array(repeating: Int.max, count: n + 1)
     
     func bellmanFord(_ k: Int) -> Bool {

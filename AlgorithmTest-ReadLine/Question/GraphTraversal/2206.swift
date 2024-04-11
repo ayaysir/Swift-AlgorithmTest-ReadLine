@@ -13,7 +13,7 @@ import Foundation
 func Q_2206() {
     let r = readLine()!.split(separator: " ").map { Int($0)! }
     let (n, m) = (r[0], r[1])
-    var map = (0..<n).map { _ in readLine()!.map(String.init) }
+    let map = (0..<n).map { _ in readLine()!.map(String.init) }
     var visited = Array(repeating: Array(repeating: Array(repeating: false, count: 2), count: m), count: n)
     let dir4: [(y: Int, x: Int)] = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
@@ -58,7 +58,7 @@ func Q_2206() {
 func Q_2206_실패() {
     let r = readLine()!.split(separator: " ").map { Int($0)! }
     let (n, m) = (r[0], r[1])
-    var map = (0..<n).map { _ in readLine()!.map(String.init) }
+    let map = (0..<n).map { _ in readLine()!.map(String.init) }
     var visited = Array(repeating: Array(repeating: false, count: m), count: n)
     let dir4: [(y: Int, x: Int)] = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
