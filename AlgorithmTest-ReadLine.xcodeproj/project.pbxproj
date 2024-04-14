@@ -213,6 +213,7 @@
 		44D1C4FA2BC8FD2A003AA7C9 /* 11725.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D1C4F32BC8FD2A003AA7C9 /* 11725.swift */; };
 		44D1C4FB2BC8FD2A003AA7C9 /* 1991.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D1C4F42BC8FD2A003AA7C9 /* 1991.swift */; };
 		44D1C4FC2BC8FD2A003AA7C9 /* 2263.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D1C4F52BC8FD2A003AA7C9 /* 2263.swift */; };
+		44D1C4FE2BCB4628003AA7C9 /* 10886.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D1C4FD2BCB4628003AA7C9 /* 10886.swift */; };
 		44DBEB602BB68DA10016E3EB /* 17298.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBEB5B2BB68DA10016E3EB /* 17298.swift */; };
 		44DBEB612BB68DA10016E3EB /* 17299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBEB5C2BB68DA10016E3EB /* 17299.swift */; };
 		44DBEB622BB68DA10016E3EB /* 1725.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBEB5D2BB68DA10016E3EB /* 1725.swift */; };
@@ -523,6 +524,7 @@
 		44D1C4F32BC8FD2A003AA7C9 /* 11725.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11725.swift; sourceTree = "<group>"; };
 		44D1C4F42BC8FD2A003AA7C9 /* 1991.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1991.swift; sourceTree = "<group>"; };
 		44D1C4F52BC8FD2A003AA7C9 /* 2263.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2263.swift; sourceTree = "<group>"; };
+		44D1C4FD2BCB4628003AA7C9 /* 10886.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10886.swift; sourceTree = "<group>"; };
 		44DBEB5B2BB68DA10016E3EB /* 17298.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17298.swift; sourceTree = "<group>"; };
 		44DBEB5C2BB68DA10016E3EB /* 17299.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17299.swift; sourceTree = "<group>"; };
 		44DBEB5D2BB68DA10016E3EB /* 1725.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1725.swift; sourceTree = "<group>"; };
@@ -821,6 +823,7 @@
 				4409281E2B306AAB002EAB0D /* 1277.swift */,
 				44F8B7752B59259E00770924 /* 17609.swift */,
 				44F8B7772B5978A000770924 /* 11501.swift */,
+				44D1C4FD2BCB4628003AA7C9 /* 10886.swift */,
 			);
 			path = unclassified;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				446E1A102B735B7400881921 /* 10813.swift in Sources */,
 				443F1FDE2BB13F59001F4FB1 /* 10816_BinarySearch.swift in Sources */,
 				446E1A0C2B73582E00881921 /* 2562.swift in Sources */,
+				44D1C4FE2BCB4628003AA7C9 /* 10886.swift in Sources */,
 				44000E5F2BA9D9EC0030A06F /* 12865.swift in Sources */,
 				44A452EC2BAAB0B200D8D895 /* 16139.swift in Sources */,
 				440C68852BC12933000F1A25 /* 2420.swift in Sources */,

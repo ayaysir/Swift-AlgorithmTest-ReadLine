@@ -13,7 +13,7 @@ import Foundation
 func Q_2263() {
     let n = Int(readLine()!)!
     var indices = [Int](repeating: 0, count: n + 1)
-    let inorder = readLine()!.split(separator: " ").enumerated().map { i, v in
+    _ = readLine()!.split(separator: " ").enumerated().map { i, v in
         let n = Int(String(v))!
         indices[n] = i
         return n
