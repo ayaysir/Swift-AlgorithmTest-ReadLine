@@ -292,6 +292,7 @@ let questionDict: [Int: (() -> Void)] = [
     1774: Q_1774,
     6497: Q_6497,
     17472: Q_17472,
+    2558: Q_2558,
 ]
 
 // while true {
@@ -302,7 +303,7 @@ let questionDict: [Int: (() -> Void)] = [
 // }
 
 let targetQuestion =
-9372
+2558
 
 func question(_ number: Int) {
     print("======== Question \(number) ========")
