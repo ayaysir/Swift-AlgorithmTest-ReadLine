@@ -40,12 +40,12 @@ func Q_1197() {
         unf[y] = x
     }
     
-    func union(pair: Edge) {
-        union(pair.from, pair.to)
+    func union(edge: Edge) {
+        union(edge.from, edge.to)
     }
     
-    func hasSameParent(pair: Edge) -> Bool {
-        find(pair.from) == find(pair.to)
+    func hasSameParent(edge: Edge) -> Bool {
+        find(edge.from) == find(edge.to)
     }
     
     let edges: [Edge] = {
@@ -60,8 +60,8 @@ func Q_1197() {
     }()
     var wSum = 0
     
-    for i in 0..<e where !hasSameParent(pair: edges[i]) {
-        union(pair: edges[i])
+    for i in 0..<e where !hasSameParent(edge: edges[i]) {
+        union(edge: edges[i])
         wSum += edges[i].weight
     }
     
