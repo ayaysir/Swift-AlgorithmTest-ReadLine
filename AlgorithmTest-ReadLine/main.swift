@@ -303,7 +303,7 @@ let questionDict: [Int: (() -> Void)] = [
 // }
 
 let targetQuestion =
-4386
+1774
 
 func question(_ number: Int) {
     print("======== Question \(number) ========")
