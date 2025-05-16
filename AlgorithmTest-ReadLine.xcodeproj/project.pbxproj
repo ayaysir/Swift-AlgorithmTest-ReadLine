@@ -109,6 +109,7 @@
 		447011CD2B767A0300616ED5 /* 3003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447011CC2B767A0300616ED5 /* 3003.swift */; };
 		447011CF2B767D6700616ED5 /* 2444.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447011CE2B767D6700616ED5 /* 2444.swift */; };
 		447011D12B7687C200616ED5 /* 10988.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447011D02B7687C200616ED5 /* 10988.swift */; };
+		4479AD0D2DD7067A005D5693 /* 10531.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD0C2DD70675005D5693 /* 10531.swift */; };
 		448423EB2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */; };
 		448423ED2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */; };
 		448423F52BB3DEDC00C99FD7 /* 1520.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EF2BB3DEDC00C99FD7 /* 1520.swift */; };
@@ -433,6 +434,9 @@
 		447011CC2B767A0300616ED5 /* 3003.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3003.swift; sourceTree = "<group>"; };
 		447011CE2B767D6700616ED5 /* 2444.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2444.swift; sourceTree = "<group>"; };
 		447011D02B7687C200616ED5 /* 10988.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10988.swift; sourceTree = "<group>"; };
+		4479AD0C2DD70675005D5693 /* 10531.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10531.swift; sourceTree = "<group>"; };
+		4479AD0E2DD717BE005D5693 /* 10531.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 10531.md; sourceTree = "<group>"; };
+		4479AD0F2DD71883005D5693 /* 회전인자.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "회전인자.md"; sourceTree = "<group>"; };
 		448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseMaxHeap.swift; sourceTree = "<group>"; };
 		448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseAbsValue.swift; sourceTree = "<group>"; };
 		448423EF2BB3DEDC00C99FD7 /* 1520.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1520.swift; sourceTree = "<group>"; };
@@ -836,6 +840,16 @@
 			path = "심화1";
 			sourceTree = "<group>";
 		};
+		4479AD0B2DD70654005D5693 /* Fast Fourier Transform */ = {
+			isa = PBXGroup;
+			children = (
+				4479AD0F2DD71883005D5693 /* 회전인자.md */,
+				4479AD0C2DD70675005D5693 /* 10531.swift */,
+				4479AD0E2DD717BE005D5693 /* 10531.md */,
+			);
+			path = "Fast Fourier Transform";
+			sourceTree = "<group>";
+		};
 		448423E92BB2887E00C99FD7 /* unclassified */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1024,7 @@
 		44C0C3492A8DF61F0072A0B8 /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				4479AD0B2DD70654005D5693 /* Fast Fourier Transform */,
 				44D1C5122BD3D965003AA7C9 /* Minimum Spanning Tree */,
 				44D1C5022BCE6FC7003AA7C9 /* Union Find */,
 				44D1C4EE2BC8FD21003AA7C9 /* Tree */,
@@ -1609,6 +1624,7 @@
 				44CAA3812BB92B18006EF436 /* 24480.swift in Sources */,
 				443F2F322B0E47CE004294F5 /* 1789.swift in Sources */,
 				449723822BB2882E0044E8F7 /* 1927.swift in Sources */,
+				4479AD0D2DD7067A005D5693 /* 10531.swift in Sources */,
 				44C0C34B2A8DF64B0072A0B8 /* 2798.swift in Sources */,
 				44F4D4312BA80A5B00008167 /* 1149.swift in Sources */,
 				448423EB2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift in Sources */,

@@ -47,12 +47,12 @@ func Q_1992() {
     
     recursive()
     print(result)
-    print(result
-        .replacingOccurrences(of: "(", with: "x")
-        .replacingOccurrences(of: ")", with: "")
-        .replacingOccurrences(of: "0", with: "b")
-        .replacingOccurrences(of: "1", with: "w"))
-    
+    // print(result
+    //     .replacingOccurrences(of: "(", with: "x")
+    //     .replacingOccurrences(of: ")", with: "")
+    //     .replacingOccurrences(of: "0", with: "b")
+    //     .replacingOccurrences(of: "1", with: "w"))
+    // 
     let decompressedString = decompressQuadtree(compressed: result)
         .map { $0.joined(separator: " ") }
         .joined(separator: "\n")
@@ -66,10 +66,10 @@ func Q_1992() {
  - for문 전에 괄호가 시작되고, 가로세로가 동일한 사이즈에서 괄호가 닫혀야 하므로 for문 끝난 이후에 괄호가 닫히낟.
   예)
  
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 1 1 1 1
- 0 0 0 0 1 1 1 1
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 1 1 1 1
+0 0 0 0 1 1 1 1
  
  0(0011) => 왼쪽 사이즈는 4*4 이고, 오른쪽 사이즈는 각각 2*2이므로 그룹의 사이즈는 4*4이다.
 
