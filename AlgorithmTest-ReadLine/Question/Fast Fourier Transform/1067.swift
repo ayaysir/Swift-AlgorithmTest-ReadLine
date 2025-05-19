@@ -4,6 +4,8 @@
 //
 //  Created by 윤범태 on 5/17/25.
 //
+//  2: 이동 https://www.acmicpc.net/problem/1067
+//
 
 import Foundation
 

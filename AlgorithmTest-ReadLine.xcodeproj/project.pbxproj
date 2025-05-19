@@ -113,6 +113,9 @@
 		4479AD152DD85963005D5693 /* 1067.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD142DD8595B005D5693 /* 1067.swift */; };
 		4479AD182DD85B19005D5693 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD162DD85986005D5693 /* FFT.swift */; };
 		4479AD212DD9A3F2005D5693 /* 20176.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD202DD9A3EA005D5693 /* 20176.swift */; };
+		4479AD282DDB20F7005D5693 /* 17134.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD272DDB20F3005D5693 /* 17134.swift */; };
+		4479AD2A2DDB3C2C005D5693 /* FFTIterative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD292DDB3C22005D5693 /* FFTIterative.swift */; };
+		4479AD2C2DDB3C5E005D5693 /* Complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD2B2DDB3C5A005D5693 /* Complex.swift */; };
 		448423EB2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */; };
 		448423ED2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */; };
 		448423F52BB3DEDC00C99FD7 /* 1520.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EF2BB3DEDC00C99FD7 /* 1520.swift */; };
@@ -445,6 +448,11 @@
 		4479AD192DD85CFC005D5693 /* 1067.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 1067.md; sourceTree = "<group>"; };
 		4479AD202DD9A3EA005D5693 /* 20176.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 20176.swift; sourceTree = "<group>"; };
 		4479AD222DD9A972005D5693 /* 20176.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 20176.md; sourceTree = "<group>"; };
+		4479AD272DDB20F3005D5693 /* 17134.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17134.swift; sourceTree = "<group>"; };
+		4479AD292DDB3C22005D5693 /* FFTIterative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTIterative.swift; sourceTree = "<group>"; };
+		4479AD2B2DDB3C5A005D5693 /* Complex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complex.swift; sourceTree = "<group>"; };
+		4479AD2D2DDB3F9E005D5693 /* 17134.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 17134.md; sourceTree = "<group>"; };
+		4479AD2E2DDB4023005D5693 /* FFT_Iterative.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FFT_Iterative.md; sourceTree = "<group>"; };
 		448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseMaxHeap.swift; sourceTree = "<group>"; };
 		448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseAbsValue.swift; sourceTree = "<group>"; };
 		448423EF2BB3DEDC00C99FD7 /* 1520.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1520.swift; sourceTree = "<group>"; };
@@ -851,6 +859,9 @@
 		4479AD0B2DD70654005D5693 /* Fast Fourier Transform */ = {
 			isa = PBXGroup;
 			children = (
+				4479AD2E2DDB4023005D5693 /* FFT_Iterative.md */,
+				4479AD2D2DDB3F9E005D5693 /* 17134.md */,
+				4479AD272DDB20F3005D5693 /* 17134.swift */,
 				4479AD222DD9A972005D5693 /* 20176.md */,
 				4479AD202DD9A3EA005D5693 /* 20176.swift */,
 				4479AD192DD85CFC005D5693 /* 1067.md */,
@@ -1200,7 +1211,9 @@
 		44E135902AB86A3800ACC79F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4479AD2B2DDB3C5A005D5693 /* Complex.swift */,
 				4479AD162DD85986005D5693 /* FFT.swift */,
+				4479AD292DDB3C22005D5693 /* FFTIterative.swift */,
 				44E135912AB86A8700ACC79F /* DFS_BFS.swift */,
 				4409281A2B305FF2002EAB0D /* Heap.swift */,
 				44D1C5212BD7A234003AA7C9 /* Heap2.swift */,
@@ -1507,6 +1520,7 @@
 				44FBCB042B8B81DE00095943 /* 28278.swift in Sources */,
 				44000E5B2BA9CA0C0030A06F /* 2565.swift in Sources */,
 				44B95D7F2B7D0304008DA12E /* 5073.swift in Sources */,
+				4479AD2A2DDB3C2C005D5693 /* FFTIterative.swift in Sources */,
 				44BBEAAA2B75DE3E0086F90A /* 27866.swift in Sources */,
 				44D1C4ED2BC7F0D3003AA7C9 /* 1916.swift in Sources */,
 				44BBEAB62B75DE770086F90A /* 1152.swift in Sources */,
@@ -1522,6 +1536,7 @@
 				44FE257C2BA2FCDF009544CF /* 15664.swift in Sources */,
 				44FE256E2BA2F678009544CF /* 15652.swift in Sources */,
 				440C687D2BC0485C000F1A25 /* 1032.swift in Sources */,
+				4479AD2C2DDB3C5E005D5693 /* Complex.swift in Sources */,
 				443F1FD72BB138CF001F4FB1 /* 12015.swift in Sources */,
 				443F1FDC2BB13907001F4FB1 /* 1920.swift in Sources */,
 				44B95D6A2B7B90BA008DA12E /* 9506.swift in Sources */,
@@ -1538,6 +1553,7 @@
 				44F5A9D52B79D57700C1285D /* 2745.swift in Sources */,
 				44F5A9CC2B78C52100C1285D /* 2738.swift in Sources */,
 				44B95D6C2B7B95A3008DA12E /* 1978.swift in Sources */,
+				4479AD282DDB20F7005D5693 /* 17134.swift in Sources */,
 				44DBEB632BB68DA10016E3EB /* 9935.swift in Sources */,
 				44C0C3A02B7695DB0071C84F /* 1316.swift in Sources */,
 				44EFF2762B85BB0F00458971 /* 2587.swift in Sources */,

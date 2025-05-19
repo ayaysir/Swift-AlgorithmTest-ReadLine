@@ -1,45 +1,5 @@
 import Foundation
 
-/// `Complex` 구조체는 **복소수(Complex Number)**를 표현하기 위한 사용자 정의 타입입니다. Swift 5.5에는 복소수를 기본으로 지원하는 타입이 없기 때문에, 직접 구조체를 만들어야 합니다.
-/// - Parameters:
-///   - re: 실수(real) 부분
-///   - im: 허수(imaginary) 부분
-struct Complex {
-  var re: Double
-  var im: Double
-
-  init(_ re: Double, _ im: Double) {
-    self.re = re
-    self.im = im
-  }
-
-  static func + (a: Complex, b: Complex) -> Complex {
-    return Complex(a.re + b.re, a.im + b.im)
-  }
-
-  static func - (a: Complex, b: Complex) -> Complex {
-    return Complex(a.re - b.re, a.im - b.im)
-  }
-
-  static func * (a: Complex, b: Complex) -> Complex {
-    return Complex(a.re * b.re - a.im * b.im, a.re * b.im + a.im * b.re)
-  }
-
-  static func / (a: Complex, b: Double) -> Complex {
-    return Complex(a.re / b, a.im / b)
-  }
-  
-  /// 복합 연산자 (곱셈)
-  static func *= (a: inout Complex, b: Complex) {
-    a = a * b
-  }
-  
-  /// 복합 연산자 (나눗셈)
-  static func /= (a: inout Complex, b: Double) {
-    a = a / b
-  }
-}
-
 /// fft는 **Fast Fourier Transform(고속 푸리에 변환)**의 약자로, 입력 배열을 시간 영역 → 주파수 영역으로 바꾸는 함수입니다.
 /// - 왜 쓰는가?
 ///   - 컨볼루션을 빠르게 계산하기 위해서입니다.
@@ -103,7 +63,7 @@ func fft(_ a: inout [Complex], invert: Bool) {
 }
 
 /**
- 컨볼루션: 두 배열의 곱셈 합을 통해 새로운 배열을 만드는 연산
+ 컨볼루션: 두 배열의 곱셈 합을 통해 새로운 배열을 만드는 연산, 이 함수는 2의 거듭제곱으로 패딩, 실수 오차에 대비한 round() 처리까지 함
  ---
 
  ## ✅ 직관적 정의
@@ -181,7 +141,7 @@ func fft(_ a: inout [Complex], invert: Bool) {
    - b: 정수 배열 2
 
  */
-func convolution(_ a: [Int], _ b: [Int]) -> [Int] {
+func convolution(_ a: [Int], _ b: [Int], clipSmallValues: Bool = false) -> [Int] {
   // 배열 크기 설정 (다음 2의 거듭제곱으로 확장)
   var n = 1
   while n < a.count + b.count {
@@ -234,7 +194,14 @@ func convolution(_ a: [Int], _ b: [Int]) -> [Int] {
   // 결과 복원 (반올림하여 정수 배열로)
   var result = [Int](repeating: 0, count: n)
   for i in 0..<n {
-    result[i] = Int(round(fa[i].re)) // 복소수 실수부 .re만 사용 (허수부는 0에 수렴)
+    // 복소수 실수부 .re만 사용 (허수부는 0에 수렴)
+    if clipSmallValues {
+      let value = round(fa[i].re)
+      result[i] = value < 1e-3 ? 0 : Int(value)
+    } else {
+      result[i] = Int(round(fa[i].re))
+    }
   }
+  
   return result
 }

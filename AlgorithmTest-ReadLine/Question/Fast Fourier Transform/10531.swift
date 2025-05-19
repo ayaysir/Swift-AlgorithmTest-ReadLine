@@ -4,7 +4,7 @@
 //
 //  Created by 윤범태 on 5/16/25.
 //
-// 1: Golf Bot https://www.acmicpc.net/problem/10531
+//  1: Golf Bot https://www.acmicpc.net/problem/10531
 //
 
 /*

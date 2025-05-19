@@ -4,7 +4,8 @@
 //
 //  Created by 윤범태 on 5/18/25.
 //
-
+//  3: Needle https://www.acmicpc.net/problem/20176
+//
 import Foundation
 
 func Q_20176() {
