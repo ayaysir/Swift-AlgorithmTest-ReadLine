@@ -9,6 +9,8 @@ import Foundation
 
 func fftIterative(_ a: inout [Complex], invert: Bool) {
   let n = a.count
+  guard n > 1 else { return }
+  
   // 1. 비트 반전(permutation)
   var j = 0
   for i in 1..<n {

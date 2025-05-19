@@ -116,6 +116,7 @@
 		4479AD282DDB20F7005D5693 /* 17134.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD272DDB20F3005D5693 /* 17134.swift */; };
 		4479AD2A2DDB3C2C005D5693 /* FFTIterative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD292DDB3C22005D5693 /* FFTIterative.swift */; };
 		4479AD2C2DDB3C5E005D5693 /* Complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD2B2DDB3C5A005D5693 /* Complex.swift */; };
+		4479AD302DDB44AA005D5693 /* 15576.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4479AD2F2DDB44A1005D5693 /* 15576.swift */; };
 		448423EB2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */; };
 		448423ED2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */; };
 		448423F52BB3DEDC00C99FD7 /* 1520.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448423EF2BB3DEDC00C99FD7 /* 1520.swift */; };
@@ -453,6 +454,8 @@
 		4479AD2B2DDB3C5A005D5693 /* Complex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complex.swift; sourceTree = "<group>"; };
 		4479AD2D2DDB3F9E005D5693 /* 17134.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 17134.md; sourceTree = "<group>"; };
 		4479AD2E2DDB4023005D5693 /* FFT_Iterative.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FFT_Iterative.md; sourceTree = "<group>"; };
+		4479AD2F2DDB44A1005D5693 /* 15576.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15576.swift; sourceTree = "<group>"; };
+		4479AD312DDB4E29005D5693 /* 15576.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = 15576.md; sourceTree = "<group>"; };
 		448423EA2BB28BB900C99FD7 /* PriorityQueueUseMaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseMaxHeap.swift; sourceTree = "<group>"; };
 		448423EC2BB29BE400C99FD7 /* PriorityQueueUseAbsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUseAbsValue.swift; sourceTree = "<group>"; };
 		448423EF2BB3DEDC00C99FD7 /* 1520.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1520.swift; sourceTree = "<group>"; };
@@ -859,9 +862,11 @@
 		4479AD0B2DD70654005D5693 /* Fast Fourier Transform */ = {
 			isa = PBXGroup;
 			children = (
+				4479AD312DDB4E29005D5693 /* 15576.md */,
 				4479AD2E2DDB4023005D5693 /* FFT_Iterative.md */,
 				4479AD2D2DDB3F9E005D5693 /* 17134.md */,
 				4479AD272DDB20F3005D5693 /* 17134.swift */,
+				4479AD2F2DDB44A1005D5693 /* 15576.swift */,
 				4479AD222DD9A972005D5693 /* 20176.md */,
 				4479AD202DD9A3EA005D5693 /* 20176.swift */,
 				4479AD192DD85CFC005D5693 /* 1067.md */,
@@ -1466,6 +1471,7 @@
 				44E237002B71F6DE00E40AF3 /* 2739.swift in Sources */,
 				44A453182BAEA53500D8D895 /* 1780.swift in Sources */,
 				44C4180A2B872B9600B99126 /* 1620.swift in Sources */,
+				4479AD302DDB44AA005D5693 /* 15576.swift in Sources */,
 				44F5A9D22B78D4F800C1285D /* 2563.swift in Sources */,
 				44351F852B7B8E29007A6702 /* 2501.swift in Sources */,
 				44A453122BAEA53500D8D895 /* 2740.swift in Sources */,
